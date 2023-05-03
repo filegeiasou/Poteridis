@@ -4,8 +4,13 @@
 #include "Bot.h"
 using namespace std;
 #include <iostream>
-int main ()
+int main (int argc , char **argv)
 {
+    if (argc<2)
+    {
+        cout<<"Must put a map.txt to play"<<endl;
+        exit(0);
+    }
     int x ,y;
     initscr(); 
     cbreak();
@@ -13,7 +18,7 @@ int main ()
     curs_set(0);
     keypad(stdscr, TRUE);
     Map map;
-    map.create();
+    map.create(argv[1]);
     char (*n2map)[15]= map.getArray();
     map.display(n2map);
     Diamond diam;
