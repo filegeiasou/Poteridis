@@ -6,7 +6,7 @@ class Map
         char example_array[15][15];
     public:
         void display(char [15][15]);
-        void create();
+        void create(char []);
         char(*getArray())[15];
 };
 
