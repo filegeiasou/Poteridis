@@ -12,9 +12,9 @@ void Map::display(char n2MapArray[15][15])
         }
     }
 }
-void Map::create()
+void Map::create(char argv[])
 {
-    ifstream mymap("map.txt");
+    ifstream mymap(argv);
     int g=0;
     string text;
     while(getline(mymap,text))
