@@ -4,6 +4,7 @@
 #include "Bot.h"
 using namespace std;
 #include <iostream>
+//malakistiko
 int main (int argc , char **argv)
 {
     if (argc<2)
